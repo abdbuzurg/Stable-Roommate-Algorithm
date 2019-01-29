@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<head>
+  <!-- <link rel="stylesheet" href="{% static "css/index.css" %}"> -->
+</head>
+
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.full_name.label_tag }} <br>{{ form.full_name }} <br>
+  {{ form.email.error }}
+  {{ form.email.label_tag }}<br> {{ form.email }} <br>
+  Where are you from? <br>{{ form.country }} <br>
+  At which campus you will be studying the next semester? <br>{{ form.campus }}<br>
+  {{ form.gender.label_tag }} <br>{{ form.gender }} <br>
+  {{ form.year.label_tag }}<br> {{ form.year }} <br>
+  How clean or mess you are? (0-messy, 10-clean): {{ form.scale1 }} <br>
+  Sound preference? (0-silence, 10-ok with loud sounds): {{ form.scale2 }} <br>
+  Is it easy for you to make friends? (0-difficult, 10-easy): {{ form.scale3 }} <br>
+  Are you okay with people visiting your space? (0-NO, 5-neutral, 10-Definetely): {{ form.scale4 }} <br>
+  Do you like to sleep in darkness or in light? (0-complete darkness, 5-dont care, 10-light): {{ form.scale5 }} <br>
+  At what time do you usually go to sleep? {{ form.scale6 }} <br>
+  Approximately what time would you usually wake up? {{ form.scale7 }} <br>
+  How shy or outgoing you are? (0-shy, 10-outgoing): {{ form.scale8 }} <br>
+  Do you have any health issues and allergies to food or other items that we should know about:<br>{{ form.extra1 }} <br>
+  What is your emergency contact person?<br>
+  What is their name and how are they related to you?<br>
+  What is their phone number?<br>
+  What is their email address (if they have)<br>{{ form.extra2 }} <br>
+  We use WhatsApp to communicate with our student body.<br>
+  What is your WhatsApp number(if you have one)? <br>{{ form.extra3 }} <br>
+  What is you T-Shirt size?<br>{{ form.extra4 }}<br>
+  What is you sweater size?<br>{{ form.extra5 }}<br>
+  Do you have any questions, concerns or additional comments you would like to share with your Student Life Advisors?<br>{{form.extra6}}
+
+
+
+  <div class="slidecontainer">
+    <input type="range" min="1" max="10" value="5" class="slider" id="Scale1">
+    <p>Value: <span id="val1"></span></p>
+  </div>
+  <script src="{% static 'js/javascript.js' %}"></script>
+
+
+  <button type="submit">Submit</button>
+
+</form>
+
+
+
+
+{% endblock %}

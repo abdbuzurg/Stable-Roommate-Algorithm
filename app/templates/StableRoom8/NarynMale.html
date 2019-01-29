@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div>
+    <a href='{% url 'match' 0 0 %}'><h2>Match</h2></a>
+</div>
+
+{% for survey in list %}
+    <div>
+        <a href='{% url 'survey-detail' survey.id %}'>{{ survey.full_name }}</a>
+    </div>
+{% endfor %}
+
+{% endblock %}

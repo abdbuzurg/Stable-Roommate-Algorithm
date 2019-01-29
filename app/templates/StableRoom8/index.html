@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<header>
+  {% if not user.is_authenticated %}
+    <h3><a href="{% url 'SURVEYS' %}">Answer for survey</a></h3>
+  {% else %}
+    <h3>Number of students answered for the survey: {{ num }}</h3>
+    <h3><a href="{% url 'answers' %}">List of all answers</a></h3>
+
+  {% endif %}
+</header>
+
+
+{% endblock %}

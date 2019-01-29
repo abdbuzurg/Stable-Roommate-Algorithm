@@ -1,0 +1,90 @@
+e`{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<head>
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+   <link rel="stylesheet" href="{% static "css/index.css" %}">
+</head>
+<h1>
+Student Name: {{info.full_name}}
+</h1>
+
+<table id='table1'>
+  <tr>
+    <th>Email:</th>
+    <th>{{info.email}}</th>
+  </tr>
+  <tr>
+    <th>Country:</th>
+    <th> {{info.country}}</th>
+  </tr>
+  <tr>
+    <th>Campus:</th>
+    <th> {{info.campus}}</th>
+  </tr>
+  <tr>
+    <th>Gender:</th>
+    <th>{{info.gender}}</th>
+  </tr>
+  <tr>
+    <th>Year:</th>
+    <th>{{info.year}}</th>
+  </tr>
+  <tr>
+    <th>How clean or mess you are? (0-messy, 10-clean):</th>
+    <th>{{ info.scale1 }}</th>
+  </tr>
+  <tr>
+    <th>Sound preference? (0-silence, 10-ok with loud sounds):</th>
+    <th>{{ info.scale2 }} </th>
+  </tr>
+  <tr>
+    <th>Is it easy for you to make friends? (0-difficult, 10-easy):</th>
+    <th>{{ info.scale3 }}</th>
+  </tr>
+  <tr>
+    <th>Are you okay with people visiting your space? (0-NO, 5-neutral, 10-Definetely): </th>
+    <th>{{ info.scale4 }}</th>
+  </tr>
+  <tr>
+    <th>Do you like to sleep in darkness or in light? (0-complete darkness, 5-dont care, 10-light):</th>
+    <th> {{ info.scale5 }}</th>
+  </tr>
+  <tr>
+    <th>At what time do you usually go to sleep? </th>
+    <th>{{ info.scale6 }}</th>
+  </tr>
+  <tr>
+    <th>  Approximately what time would you usually wake up? </th>
+    <th>{{ info.scale7 }}</th>
+  </tr>
+  <tr>
+    <th>How shy or outgoing you are? (0-shy, 10-outgoing): </th>
+    <th>{{ info.scale8 }}</th>
+  </tr>
+  <tr>
+    <th>Do you have any health issues and allergies to food or other items that we should know about:</th>
+    <th>{{ info.extra1 }} </th>
+  </tr>
+  <tr>
+    <th>Emergency contact person:</th>
+    <th>{{ info.extra2 }}</th>
+  </tr>
+  <tr>
+    <th>WhatsApp:</th>
+    <th>{{ info.extra3 }}</th>
+  </tr>
+  <tr>
+    <th>T-Shirt size?</th>
+    <th>{{ info.extra4 }}</th>
+  </tr>
+  <tr>
+    <th>Sweater size?</th>
+    <th>{{ info.extra5 }}</th>
+  </tr>
+  <tr>
+    <th>Additional info:</th>
+    <th>{{info.extra6}}</th>
+  </tr>
+</table>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% load static %}
+
+
+<head>
+
+</head>
+<body>
+
+    <h4>
+      <a href="{% url 'HOME' %}">HOME</a>
+
+      {% if user.is_authenticated %}
+        | <a href="{% url 'logout' %}">LOGOUT</a>
+      {% else %}
+        | <a href="{% url 'login' %}">LOGIN</a>
+      {% endif %}
+    </h4>
+
+  <img src="{% static "images/logo.png" %}">
+</body>
+
+
+{% block content %}
+{% endblock %}

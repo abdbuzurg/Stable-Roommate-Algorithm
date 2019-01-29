@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>All Roommate pairs</h1>
+{% for person1, person2 in result.items %}
+    <div>
+        <h4>{{ person1 }} and {{ person2 }}</h4>
+    </div>
+{% endfor %}
+
+{% endblock %}

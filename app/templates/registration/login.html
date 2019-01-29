@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+</head>
+<body>
+  <h4>Login</h4>
+  <div id='test_div'>
+    <form method="post">
+      {% csrf_token %}
+      Username:<br>
+      {{ form.username }}<br>
+      Password:<br>
+      {{ form.password }}
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>
+<a href="{% url 'naryn-male' %}">NarynMale</a><br>
+<a href="{% url 'naryn-female' %}">NarynFemale</a><br>
+<a href="{% url 'khorog-male' %}">KhorogMale</a><br>
+<a href="{% url 'khorog-female' %}">KhorogFemale</a><br>
+<a href="{% url 'tekeli-male' %}">TekeliMale</a><br>
+<a href="{% url 'tekeli-female' %}">TekeliFemale</a>
+</h1>
+
+{% endblock %}
